@@ -1,15 +1,11 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
-
-namespace CoreLibrary.Extensions
+﻿namespace CoreLibrary.Extensions
 {
-    public static class File
+  public static class File
+  {
+    public static byte[] ToByteArray(this string imagePath)
     {
-        public static byte[] ToByteArray(this string imagePath)
-        {
-            byte[] bytes = System.IO.File.ReadAllBytes(imagePath);
-            return bytes;
-        }
+      byte[] bytes = System.IO.File.ReadAllBytes(imagePath);
+      return bytes;
     }
+  }
 }
